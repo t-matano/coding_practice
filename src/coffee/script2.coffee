@@ -1,1 +1,0 @@
-do -> alert "world"

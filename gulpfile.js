@@ -36,7 +36,7 @@ gulp.task('sass', function() {
 gulp.task('js', function() {
 	gulp.src('./src/coffee/*.coffee')
 			.pipe(plumber())
-			.pipe(coffee())
+			// .pipe(coffee())
 			.pipe(concat('all.min.js'))
 			.pipe(uglify())
 			// .pipe(header('/* copyright @taguchi */'))
@@ -46,7 +46,8 @@ gulp.task('js', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch('./src/coffee/*.coffee', ['js'])
+	// gulp.watch('./src/coffee/*.coffee', ['js'])
+	gulp.watch('./src/js/*.js', ['js'])
 	gulp.watch('./src/*.html', ['html'])
 	gulp.watch('./src/scss/*.scss', ['sass'])
 });
